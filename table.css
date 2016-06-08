@@ -1,0 +1,21 @@
+/* Table */
+.table {
+  border-collapse: collapse !important;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+.table td,
+.table th {
+  background-color: #fff !important;
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #D9D9D9;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  min-height: .01%;
+  overflow-x: auto;
+}

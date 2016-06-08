@@ -1,0 +1,47 @@
+/* Button */
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  border: 0;
+  color: white;
+  background: #3A71B8;
+}
+
+.btn:hover{
+  background: #2666B8;
+}
+
+.btn:active{
+  background: #1158B5;
+}
+
+.btn:focus,
+.btn:active,
+.btn:active:focus{
+  background-image: none;
+  outline: 0;
+}
+
+.btn:focus, .btn:hover {
+  text-decoration: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}

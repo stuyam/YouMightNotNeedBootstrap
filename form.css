@@ -1,0 +1,43 @@
+/* Form Inputs */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.form-control:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+select.form-control{
+  height: 2.5rem;
+}
+
+.form-control:focus,
+select.form-control:focus::-ms-value {
+  color: #555;
+  background-color: #fff;
+}
+
+.form-control::-webkit-input-placeholder,
+.form-control:-ms-input-placeholder,
+.form-control::-moz-placeholder,
+.form-control::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
