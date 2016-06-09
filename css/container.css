@@ -1,0 +1,10 @@
+/* Container */
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
