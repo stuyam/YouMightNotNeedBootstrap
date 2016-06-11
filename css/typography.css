@@ -3,6 +3,18 @@ body{
   font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
 h1, h2, h3, h4, h5, h6{
   margin-top: 0;
   margin-bottom: 0.5rem;
