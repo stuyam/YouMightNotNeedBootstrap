@@ -1,4 +1,4 @@
-/* Button */
+/* button */
 .btn {
   display: inline-block;
   font-weight: normal;
@@ -22,6 +22,7 @@
   border: 0;
   color: white;
   background: #3A71B8;
+  text-decoration: none;
 }
 
 .btn:hover{

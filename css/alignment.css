@@ -1,4 +1,4 @@
-/* Floats */
+/* alignment */
 .pull-left{
   float: left;
 }
@@ -11,4 +11,11 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.center-block{
+  position: relative;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -2,22 +2,36 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link rel="stylesheet" href="css/button.css"/>
     <link rel="stylesheet" href="css/form.css"/>
     <link rel="stylesheet" href="css/table.css"/>
     <link rel="stylesheet" href="css/hr.css"/>
+    <link rel="stylesheet" href="css/heading.css"/>
     <link rel="stylesheet" href="css/alert.css"/>
     <link rel="stylesheet" href="css/image.css"/>
-    <link rel="stylesheet" href="css/float.css"/>
+    <link rel="stylesheet" href="css/alignment.css"/>
     <link rel="stylesheet" href="css/container.css"/>
     <link rel="stylesheet" href="css/typography.css"/>
     <link rel="stylesheet" href="doc-assets/prism.css"/>
     <style type="text/css">
+      section{
+        overflow: hidden;
+      }
       .pane{
+        position: relative;
         float: left;
         width: 50%;
         box-sizing: border-box;
-        padding: 1rem;
+        padding: 3rem;
+      }
+      .pane + .pane{
+        background: #f7f7f9;
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+      }
+      pre{
+        background: #f7f7f9 !important;
       }
       @media (max-width: 700px) {
         .pane {
@@ -30,32 +44,59 @@
       pre[class*="language-"]{
         margin: 0;
       }
+      hr{
+        margin: 0;
+      }
+      header{
+        padding: 2rem;
+      }
+      header p{
+        text-indent: 2rem;
+      }
+      .view-on-github{
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        border-radius: 0 0 0 5px;
+      }
+      .component{
+        color: #D5D5D5;
+        margin-bottom: 1rem;
+      }
     </style>
   </head>
   <body>
 
-    <div class="container">
+    <header class="container">
       <h1 class="text-center">You Might Not Need Bootstrap</h1>
       <p>This site is an educational look into some of the components of bootstrap. It removes all of the extra fluff of bootstrap, only showing some of the core parts. Each components css has been shrunk down to the minimun required for browser support and gets ride of the extra features of each component that comes in bootstrap.
       </p>
       <p>I want to preface this by saying I have nothing against bootstrap. Infact I &lt;3 bootstrap and use it on mostly every site I build and could not live without it. So why does this matter? First of all, sometimes you can't always use bootstrap because your job or the project you are working on doesn't use it or because you are building something like an open source project and want to keep it lean. Second, this page is meant to be an educational reasource to expose some of the magic of bootstrap so that people looking to understand CSS better can copy and paste these small CSS snippets and tinker on them.
       </p>
       <h6 class="text-center">Built by <a href="https://twitter.com/StuYam">@StuYam</a></h6>
-      <h6 class="text-center">I would love collaboration on this so feel free to offer suggetions to the project on <a href="https://github.com/yamartino/YouMightNotNeedBootstrap">GitHub</a></h6>
+      <h6 class="text-center" style="color:#690;">I would love collaboration on this so feel free to offer suggetions to the project on <a href="https://github.com/yamartino/YouMightNotNeedBootstrap">GitHub</a></h6>
+      <iframe src="https://ghbtns.com/github-btn.html?user=yamartino&repo=YouMightNotNeedBootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px" style="display:block;position:relative;margin: 1rem auto 0 auto;"></iframe>
+    </header>
 
       <hr>
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* typography */</h2>
           <div>Blaaaa blaaa blaaaa this text is nice and san-serifed :) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
           <h3 class="text-left">Left</h3>
           <h3 class="text-center">Center</h3>
           <h3 class="text-right">Right</h3>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Typography */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/typography.css">View on GitHub</a>
+          <pre><code class="language-css">/* typography */
 body{
   font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373a3c;
 }
 
 .text-center{
@@ -68,7 +109,8 @@ body{
 
 .text-right{
   text-align: right;
-}</code></pre>
+}
+</code></pre>
         </div>
       </section>
 
@@ -76,6 +118,7 @@ body{
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* heading */</h2>
           <h1>This is an h1</h1>
           <h2>This is an h2</h2>
           <h3>This is an h3</h3>
@@ -84,7 +127,9 @@ body{
           <h6>This is an h6</h6>
         </div>
         <div class="pane">
-          <pre><code class="language-css">h1, h2, h3, h4, h5, h6{
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/heading.css">View on GitHub</a>
+          <pre><code class="language-css">/* heading */
+h1, h2, h3, h4, h5, h6{
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -123,13 +168,15 @@ h6 {
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* button */</h2>
           <button class="btn">Hello</button>
           <div class="btn">Hello</div>
-          <a class="btn">Hello</a>
+          <a class="btn" href="#">Hello</a>
           <span class="btn">Hello</span>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Button */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/button.css">View on GitHub</a>
+          <pre><code class="language-css">/* button */
 .btn {
   display: inline-block;
   font-weight: normal;
@@ -153,6 +200,7 @@ h6 {
   border: 0;
   color: white;
   background: #3A71B8;
+  text-decoration: none;
 }
 
 .btn:hover{
@@ -177,13 +225,15 @@ h6 {
 .btn:disabled {
   cursor: not-allowed;
   opacity: .65;
-}</code></pre>
+}
+</code></pre>
       </section>
 
       <hr />
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* form input */</h2>
           <input class="form-control" type="text" />
           <br />
           <select class="form-control">
@@ -195,7 +245,8 @@ h6 {
           <textarea class="form-control"></textarea>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Form Inputs */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/form.css">View on GitHub</a>
+          <pre><code class="language-css">/* form input */
 .form-control {
   box-sizing: border-box;
   display: block;
@@ -249,6 +300,7 @@ select.form-control:focus::-ms-value {
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* table */</h2>
           <table class="table">
             <thead>
               <tr>
@@ -277,7 +329,8 @@ select.form-control:focus::-ms-value {
           </table>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Table */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/table.css">View on GitHub</a>
+          <pre><code class="language-css">/* table */
 .table {
   border-collapse: collapse !important;
   width: 100%;
@@ -312,10 +365,12 @@ select.form-control:focus::-ms-value {
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* alert */</h2>
           <div class="alert">This is an alert</div>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Alert */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/alert.css">View on GitHub</a>
+          <pre><code class="language-css">/* alert */
 .alert {
   padding: 15px;
   margin-bottom: 1rem;
@@ -332,12 +387,14 @@ select.form-control:focus::-ms-value {
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* image */</h2>
           <img src="http://placehold.it/300x300" class="img-rounded">
           <img src="http://placehold.it/300x300" class="img-circle">
           <img src="http://placehold.it/300x300" class="img-thumbnail">
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Image */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/image.css">View on GitHub</a>
+          <pre><code class="language-css">/* image */
 .img-rounded {
   border-radius: 0.3rem;
 }
@@ -362,10 +419,12 @@ select.form-control:focus::-ms-value {
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* container */</h2>
           <div class="container">(container)</div>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Container */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/container.css">View on GitHub</a>
+          <pre><code class="language-css">/* container */
 .container {
   width: 100%;
   max-width: 1140px;
@@ -383,9 +442,11 @@ select.form-control:focus::-ms-value {
 
       <section class="clearfix">
         <div class="pane">
+          <h2 class="component">/* hr */</h2>
           <hr />
         </div>
         <div class="pane">
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/hr.css">View on GitHub</a>
           <pre><code class="language-css">/* hr */
 hr{
   border: 0;
@@ -400,13 +461,21 @@ hr{
 
       <section class="clearfix">
         <div class="pane">
-          <div class="clearfix" style="background:#FE642E;padding:1rem;">
-            <div class="pull-left" style="background:#58ACFA;padding:1rem;">Pull me left</div>
-            <div class="pull-right" style="background:#58ACFA;padding:1rem;">Pull me right</div>
+          <h2 class="component">/* alignment */</h2>
+          <div class="clearfix" style="background:#EEEEEE;padding:1rem;">
+            <div class="pull-left" style="background:#F7F7F7;padding:1rem;">Pull me left</div>
+            <div class="pull-right" style="background:#F7F7F7;padding:1rem;">Pull me right</div>
+          </div>
+          <br>
+          <div class="center-block" style="background:#EEEEEE;padding:1rem;">
+            This block has no fixed width
+            <br>
+            but is centered with .center-block
           </div>
         </div>
         <div class="pane">
-          <pre><code class="language-css">/* Floats */
+          <a class="btn view-on-github" target="new" href="https://github.com/yamartino/YouMightNotNeedBootstrap/blob/gh-pages/css/alignment.css">View on GitHub</a>
+          <pre><code class="language-css">/* alignment */
 .pull-left{
   float: left;
 }
@@ -419,11 +488,18 @@ hr{
   content: "";
   display: table;
   clear: both;
+}
+
+.center-block{
+  position: relative;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }</code></pre>
         </div>
       </section>
 
-    </div>
+    <!-- </div> -->
 
     <a href="https://github.com/yamartino/YouMightNotNeedBootstrap" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <script type="text/javascript" src="doc-assets/prism.js"></script>
